@@ -5,11 +5,10 @@ function getNewProduct(isIncrease, id) {
   previousProductNumber = parseInt(ProductNumberFieldString);
   if (isIncrease === true) {
     newProductNumber = previousProductNumber + 1;
-  } else {
-    if (previousProductNumber > 0) {
-      newProductNumber = previousProductNumber - 1;
-    }
+  } else if (previousProductNumber > 0) {
+    newProductNumber = previousProductNumber - 1;
   }
+
   ProductNumberField.value = newProductNumber;
   return newProductNumber;
 }
